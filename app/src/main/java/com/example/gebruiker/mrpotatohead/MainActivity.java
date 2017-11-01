@@ -13,8 +13,8 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
+    Drawable image;
     ImageView imageView;
-    int image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,20 +22,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageView = (ImageView) findViewById(R.id.imageViewHat);
-
-        if (savedInstanceState != null) {
-            image = savedInstanceState.getInt("image", R.drawable.hat);
-            imageView.setImageDrawable(image);
-        }
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putInt("image", image);
-
         super.onSaveInstanceState(outState);
+
+        image = imageView.getDrawable();
     }
 
+    @Override
+    protected void onRestoreInstanceState(Bundle inState) {
+        super.onRestoreInstanceState(inState);
+        imageView.setImageDrawable(image);
+    }
 
 
     public void hatClicked(View view) {
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 
     public void earsClicked(View view) {
         ImageView ears = findViewById(R.id.imageViewEars);
