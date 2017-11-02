@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         imageViewGlasses = (ImageView) findViewById(R.id.imageViewGlasses);
         imageViewShoes = (ImageView) findViewById(R.id.imageViewShoes);
         imageViewMouth = (ImageView) findViewById(R.id.imageViewMouth);
-        imageViewMustache = (ImageView) findViewById(R.id.imageViewMouth);
+        imageViewMustache = (ImageView) findViewById(R.id.imageViewMustache);
         imageViewEyes = (ImageView) findViewById(R.id.imageViewEyes);
         imageViewEyebrows = (ImageView) findViewById(R.id.imageViewEyebrows);
 
@@ -49,32 +49,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        image = imageViewHat.getVisibility();
-        image = imageViewEars.getVisibility();
-        image = imageViewArms.getVisibility();
-        image = imageViewNose.getVisibility();
-        image = imageViewGlasses.getVisibility();
-        image = imageViewShoes.getVisibility();
-        image = imageViewMouth.getVisibility();
-        image = imageViewMustache.getVisibility();
-        image = imageViewEyes.getVisibility();
-        image = imageViewEyebrows.getVisibility();
+        outState.putInt("Hat", imageViewHat.getVisibility());
+        outState.putInt("Ears", imageViewEars.getVisibility());
+        outState.putInt("Arms", imageViewArms.getVisibility());
+        outState.putInt("Nose", imageViewNose.getVisibility());
+        outState.putInt("Glasses", imageViewGlasses.getVisibility());
+        outState.putInt("Shoes", imageViewShoes.getVisibility());
+        outState.putInt("Mouth", imageViewMouth.getVisibility());
+        outState.putInt("Mustache", imageViewMustache.getVisibility());
+        outState.putInt("Eyes", imageViewEyes.getVisibility());
+        outState.putInt("Eyebrows", imageViewEyebrows.getVisibility());
+
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle inState) {
         super.onRestoreInstanceState(inState);
 
-        imageViewHat.setVisibility(image);
-        imageViewEars.setVisibility(image);
-        imageViewArms.setVisibility(image);
-        imageViewNose.setVisibility(image);
-        imageViewGlasses.setVisibility(image);
-        imageViewShoes.setVisibility(image);
-        imageViewMouth.setVisibility(image);
-        imageViewMustache.setVisibility(image);
-        imageViewEyes.setVisibility(image);
-        imageViewEyebrows.setVisibility(image);
+        imageViewHat.setVisibility(inState.getInt("Hat"));
+        imageViewEars.setVisibility(inState.getInt("Ears"));
+        imageViewArms.setVisibility(inState.getInt("Arms"));
+        imageViewNose.setVisibility(inState.getInt("Nose"));
+        imageViewGlasses.setVisibility(inState.getInt("Glasses"));
+        imageViewShoes.setVisibility(inState.getInt("Shoes"));
+        imageViewMouth.setVisibility(inState.getInt("Mouth"));
+        imageViewMustache.setVisibility(inState.getInt("Mustache"));
+        imageViewEyes.setVisibility(inState.getInt("Eyes"));
+        imageViewEyebrows.setVisibility(inState.getInt("Eyebrows"));
+
     }
 
 
