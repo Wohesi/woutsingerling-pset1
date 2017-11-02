@@ -13,132 +13,171 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Drawable image;
-    ImageView imageView;
+    int image;
+    ImageView imageViewHat;
+    ImageView imageViewEars;
+    ImageView imageViewArms;
+    ImageView imageViewNose;
+    ImageView imageViewGlasses;
+    ImageView imageViewShoes;
+    ImageView imageViewMouth;
+    ImageView imageViewMustache;
+    ImageView imageViewEyes;
+    ImageView imageViewEyebrows;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        imageView = (ImageView) findViewById(R.id.imageViewHat);
+        imageViewHat = (ImageView) findViewById(R.id.imageViewHat);
+        imageViewEars = (ImageView) findViewById(R.id.imageViewEars);
+        imageViewArms = (ImageView) findViewById(R.id.imageViewArms);
+        imageViewNose = (ImageView) findViewById(R.id.imageViewNose);
+        imageViewGlasses = (ImageView) findViewById(R.id.imageViewGlasses);
+        imageViewShoes = (ImageView) findViewById(R.id.imageViewShoes);
+        imageViewMouth = (ImageView) findViewById(R.id.imageViewMouth);
+        imageViewMustache = (ImageView) findViewById(R.id.imageViewMouth);
+        imageViewEyes = (ImageView) findViewById(R.id.imageViewEyes);
+        imageViewEyebrows = (ImageView) findViewById(R.id.imageViewEyebrows);
+
+
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        image = imageView.getDrawable();
+        image = imageViewHat.getVisibility();
+        image = imageViewEars.getVisibility();
+        image = imageViewArms.getVisibility();
+        image = imageViewNose.getVisibility();
+        image = imageViewGlasses.getVisibility();
+        image = imageViewShoes.getVisibility();
+        image = imageViewMouth.getVisibility();
+        image = imageViewMustache.getVisibility();
+        image = imageViewEyes.getVisibility();
+        image = imageViewEyebrows.getVisibility();
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle inState) {
         super.onRestoreInstanceState(inState);
-        imageView.setImageDrawable(image);
+
+        imageViewHat.setVisibility(image);
+        imageViewEars.setVisibility(image);
+        imageViewArms.setVisibility(image);
+        imageViewNose.setVisibility(image);
+        imageViewGlasses.setVisibility(image);
+        imageViewShoes.setVisibility(image);
+        imageViewMouth.setVisibility(image);
+        imageViewMustache.setVisibility(image);
+        imageViewEyes.setVisibility(image);
+        imageViewEyebrows.setVisibility(image);
     }
 
 
     public void hatClicked(View view) {
-        ImageView hat = findViewById(R.id.imageViewHat);
+        imageViewHat = findViewById(R.id.imageViewHat);
 
-        if (hat.getVisibility() == View.VISIBLE) {
-            hat.setVisibility(view.INVISIBLE);
+        if (imageViewHat.getVisibility() == View.VISIBLE) {
+            imageViewHat.setVisibility(view.INVISIBLE);
         } else {
-            hat.setVisibility(view.VISIBLE);
+            imageViewHat.setVisibility(view.VISIBLE);
         }
 
     }
 
-
     public void earsClicked(View view) {
-        ImageView ears = findViewById(R.id.imageViewEars);
+        imageViewEars = findViewById(R.id.imageViewEars);
 
-        if (ears.getVisibility() == View.VISIBLE) {
-            ears.setVisibility(view.INVISIBLE);
+        if (imageViewEars.getVisibility() == View.VISIBLE) {
+            imageViewEars.setVisibility(view.INVISIBLE);
         } else {
-            ears.setVisibility(view.VISIBLE);
+            imageViewEars.setVisibility(view.VISIBLE);
         }
     }
 
     public void armsClicked(View view) {
-        ImageView arms = findViewById(R.id.imageViewArms);
+        imageViewArms = findViewById(R.id.imageViewArms);
 
-        if (arms.getVisibility() == View.VISIBLE) {
-            arms.setVisibility(view.INVISIBLE);
+        if (imageViewArms.getVisibility() == View.VISIBLE) {
+            imageViewArms.setVisibility(view.INVISIBLE);
         } else {
-            arms.setVisibility(view.VISIBLE);
+            imageViewArms.setVisibility(view.VISIBLE);
         }
     }
 
     public void shoesClicked(View view) {
-        ImageView shoes = findViewById(R.id.imageViewShoes);
+        imageViewShoes = findViewById(R.id.imageViewShoes);
 
-        if (shoes.getVisibility() == View.VISIBLE) {
-            shoes.setVisibility(view.INVISIBLE);
+        if (imageViewShoes.getVisibility() == View.VISIBLE) {
+            imageViewShoes.setVisibility(view.INVISIBLE);
         } else {
-            shoes.setVisibility(view.VISIBLE);
+            imageViewShoes.setVisibility(view.VISIBLE);
         }
     }
 
 
 
     public void mouthClicked(View view) {
-        ImageView mouth = findViewById(R.id.imageViewMouth);
+        imageViewMouth = findViewById(R.id.imageViewMouth);
 
-        if (mouth.getVisibility() == View.VISIBLE) {
-            mouth.setVisibility(view.INVISIBLE);
+        if (imageViewMouth.getVisibility() == View.VISIBLE) {
+            imageViewMouth.setVisibility(view.INVISIBLE);
         } else {
-            mouth.setVisibility(view.VISIBLE);
+            imageViewMouth.setVisibility(view.VISIBLE);
         }
     }
 
     public void eyebrowsClicked(View view) {
-        ImageView eb = findViewById(R.id.imageViewEyebrows);
+        imageViewEyebrows = findViewById(R.id.imageViewEyebrows);
 
-        if (eb.getVisibility() == View.VISIBLE) {
-            eb.setVisibility(view.INVISIBLE);
+        if (imageViewEyebrows.getVisibility() == View.VISIBLE) {
+            imageViewEyebrows.setVisibility(view.INVISIBLE);
         } else {
-            eb.setVisibility(view.VISIBLE);
+            imageViewEyebrows.setVisibility(view.VISIBLE);
         }
     }
 
     public void eyesClicked(View view) {
-        ImageView eyes = findViewById(R.id.imageViewEyes);
+        imageViewEyes = findViewById(R.id.imageViewEyes);
 
-        if (eyes.getVisibility() == View.VISIBLE) {
-            eyes.setVisibility(view.INVISIBLE);
+        if (imageViewEyes.getVisibility() == View.VISIBLE) {
+            imageViewEyes.setVisibility(view.INVISIBLE);
         } else {
-            eyes.setVisibility(view.VISIBLE);
+            imageViewEyes.setVisibility(view.VISIBLE);
         }
     }
 
     public void glassesClicked(View view) {
-        ImageView glasses = findViewById(R.id.imageViewGlasses);
+        imageViewGlasses = findViewById(R.id.imageViewGlasses);
 
-        if (glasses.getVisibility() == View.VISIBLE) {
-            glasses.setVisibility(view.INVISIBLE);
+        if (imageViewGlasses.getVisibility() == View.VISIBLE) {
+            imageViewGlasses.setVisibility(view.INVISIBLE);
         } else {
-            glasses.setVisibility(view.VISIBLE);
+            imageViewGlasses.setVisibility(view.VISIBLE);
         }
     }
 
     public void mustacheClicked(View view) {
-        ImageView mustache = findViewById(R.id.imageViewMustache);
+        imageViewMustache = findViewById(R.id.imageViewMustache);
 
-        if (mustache.getVisibility() == View.VISIBLE) {
-            mustache.setVisibility(view.INVISIBLE);
+        if (imageViewMustache.getVisibility() == View.VISIBLE) {
+            imageViewMustache.setVisibility(view.INVISIBLE);
         } else {
-            mustache.setVisibility(view.VISIBLE);
+            imageViewMustache.setVisibility(view.VISIBLE);
         }
     }
 
     public void noseClicked(View view) {
-        ImageView nose = findViewById(R.id.imageViewNose);
+        imageViewNose = findViewById(R.id.imageViewNose);
 
-        if (nose.getVisibility() == View.VISIBLE) {
-            nose.setVisibility(view.INVISIBLE);
+        if (imageViewNose.getVisibility() == View.VISIBLE) {
+            imageViewNose.setVisibility(view.INVISIBLE);
         } else {
-            nose.setVisibility(view.VISIBLE);
+            imageViewNose.setVisibility(view.VISIBLE);
         }
     }
 }
